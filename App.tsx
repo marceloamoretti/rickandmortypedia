@@ -7,6 +7,7 @@
 
 import type { PropsWithChildren } from 'react';
 import React, { memo, useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 import {
   SafeAreaView,
   ScrollView,
@@ -27,11 +28,6 @@ import {
 type SectionProps = PropsWithChildren<{
   title: string;
 }>;
-
-const EDIT = 'Edit';
-const APP_TSX = 'App.tsx';
-const DESCRIPTION = ' to change this screen and then come back to see your edits.';
-const READ_THE_DOCS = 'Read the docs to discover what to do next:';
 
 const Section = memo(({ children, title }: SectionProps) => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -65,6 +61,7 @@ const Section = memo(({ children, title }: SectionProps) => {
 });
 
 const App = memo(() => {
+  const { t } = useTranslation();
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = useMemo(
@@ -91,8 +88,8 @@ const App = memo(() => {
         <Header />
         <View style={viewBackground}>
           <Section title="Step One">
-            {EDIT} <Text style={styles.highlight}>{APP_TSX}</Text>
-            {DESCRIPTION}
+            {t('edit')} <Text style={styles.highlight}>{t('app')}</Text>
+            {t('description')}
           </Section>
           <Section title="See Your Changes">
             <ReloadInstructions />
@@ -100,7 +97,7 @@ const App = memo(() => {
           <Section title="Debug">
             <DebugInstructions />
           </Section>
-          <Section title="Learn More">{READ_THE_DOCS}</Section>
+          <Section title="Learn More">{t('read_the_docs')}</Section>
           <LearnMoreLinks />
         </View>
       </ScrollView>
