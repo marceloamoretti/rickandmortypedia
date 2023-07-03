@@ -52,7 +52,7 @@ const Colors = {
   pink: '#EA1E61',
   purple: '#9D28AC',
   deepPurple: '#673AB3',
-  indigo: '#3F51B2',
+  indigo: 'rgba(255, 255, 255, 0.40)',
   blue: '#1A96F0',
   lightBlue: '#00A9F1',
   cyan: '#00BCD3',
