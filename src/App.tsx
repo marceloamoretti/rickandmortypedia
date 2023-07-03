@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 import { QueryProvider } from '~components/api/QueryProvider';
-import CharacterList from '~screens/CharacterList/CharacterList';
+import Root from '~components/navigation/RootNavigation';
 
 const styles = StyleSheet.create({
   gestureHandlerWrapper: {
@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
 const App = memo(() => (
   <GestureHandlerRootView style={styles.gestureHandlerWrapper}>
     <QueryProvider>
-      <CharacterList />
+      <Root />
     </QueryProvider>
   </GestureHandlerRootView>
 ));

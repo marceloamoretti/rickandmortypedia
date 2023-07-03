@@ -6,6 +6,7 @@ import Alive from '~assets/icons/alive.png';
 import Dead from '~assets/icons/dead.png';
 import Unknown from '~assets/icons/unknown.png';
 import { Character } from '~components/characters/types';
+import useNavigation from '~components/navigation/hooks/useNavigation';
 import { TextLarge, TextSmall } from '~components/ui/components/Text';
 
 import styles from './styles';
@@ -49,8 +50,15 @@ const Info = memo<Omit<IProps, 'onPress'>>(({ character }) => (
 ));
 
 const ListItem = memo<IProps>(({ character }): ReactElement => {
+  const { navigate } = useNavigation();
+
+  const onPress = useCallback(
+    () => navigate('character_details', { character }),
+    [character, navigate]
+  );
+
   return (
-    <Pressable onPress={useCallback(() => {}, [])} style={styles.container}>
+    <Pressable onPress={onPress} style={styles.container}>
       <CharacterImage mainImage={character.mainImage} />
       <Info character={character} />
     </Pressable>
