@@ -1,5 +1,7 @@
 import { StyleSheet } from 'react-native';
 
+import { theme } from '~components/ui/theme';
+
 const styles = StyleSheet.create({
   container: { flex: 1 },
   bottomActivityIndicator: { paddingBottom: 24 },
@@ -19,6 +21,18 @@ const styles = StyleSheet.create({
     height: 200,
     width: '100%',
   },
+  topTouchable: {
+    position: 'absolute',
+    bottom: 20,
+    right: 10,
+    backgroundColor: theme.colors.deepPurple,
+    borderRadius: 20,
+    width: 40,
+    height: 40,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  topIcon: { width: 30, height: 30 },
 });
 
 export default styles;
