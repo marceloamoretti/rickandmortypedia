@@ -26,7 +26,7 @@ const Detail = memo<Props>(({ character }): ReactElement => {
   const episodeCount = getEpisodesText(character.episode?.length);
 
   return (
-    <DefaultContainer>
+    <DefaultContainer goBack>
       <ScrollView style={styles.container}>
         <Image source={character.mainImage} resizeMode="contain" style={styles.image} />
         <TextXLarge style={styles.characterName}>
