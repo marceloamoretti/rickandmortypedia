@@ -4,7 +4,6 @@
  *
  * @format
  */
-
 import type { PropsWithChildren } from 'react';
 import React, { memo, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -24,6 +23,7 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -79,33 +79,38 @@ const App = memo(() => {
   );
 
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <ScrollView contentInsetAdjustmentBehavior="automatic" style={backgroundStyle}>
-        <Header />
-        <View style={viewBackground}>
-          <Section title="Step One">
-            {t('edit')} <Text style={styles.highlight}>{t('app')}</Text>
-            {t('description')}
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">{t('read_the_docs')}</Section>
-          <LearnMoreLinks />
-        </View>
-      </ScrollView>
-    </SafeAreaView>
+    <GestureHandlerRootView style={styles.gestureHandlerWrapper}>
+      <SafeAreaView style={backgroundStyle}>
+        <StatusBar
+          barStyle={isDarkMode ? 'light-content' : 'dark-content'}
+          backgroundColor={backgroundStyle.backgroundColor}
+        />
+        <ScrollView contentInsetAdjustmentBehavior="automatic" style={backgroundStyle}>
+          <Header />
+          <View style={viewBackground}>
+            <Section title="Step One">
+              {t('edit')} <Text style={styles.highlight}>{t('app')}</Text>
+              {t('description')}
+            </Section>
+            <Section title="See Your Changes">
+              <ReloadInstructions />
+            </Section>
+            <Section title="Debug">
+              <DebugInstructions />
+            </Section>
+            <Section title="Learn More">{t('read_the_docs')}</Section>
+            <LearnMoreLinks />
+          </View>
+        </ScrollView>
+      </SafeAreaView>
+    </GestureHandlerRootView>
   );
 });
 
 const styles = StyleSheet.create({
+  gestureHandlerWrapper: {
+    flex: 1,
+  },
   sectionContainer: {
     marginTop: 32,
     paddingHorizontal: 24,
