@@ -7,7 +7,7 @@ import { Theme } from '../types';
 type FontSize = 'xLarge' | 'large' | 'medium' | 'small' | 'xSmall';
 
 type IProps = {
-  children: string;
+  children: React.ReactNode;
   fontSize: FontSize;
   color?: keyof Theme['colors'];
   inverted?: boolean;

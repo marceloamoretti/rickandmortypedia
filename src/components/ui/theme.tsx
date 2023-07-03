@@ -34,7 +34,7 @@ const Colors = {
   grey50: '#FAFAFA',
 
   /* Gradients */
-  gradientPurple: ['#6842FF', '#896BFF'],
+  gradientPurple: ['rgba(17, 16, 20, 0.98)', '#2D1671', '#3B228F', '#5539C8'],
   gradientGreen: ['#1AB65C', '#39E180'],
   gradientBlue: ['#246BFD', '#6F9EFF'],
   gradientYellow: ['#FACC15', '#FFE580'],
@@ -72,7 +72,7 @@ const Colors = {
   bgBlue: '#F6FAFD',
   bgRed: '#FFF5F5',
   bgYellow: '#FFFEE0',
-  bgPurple: '#FCF4FF',
+  bgPurple: 'rgba(255, 255, 255, 0.41)',
 };
 
 const FontFamily = {
