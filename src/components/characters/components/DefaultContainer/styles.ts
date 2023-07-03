@@ -8,6 +8,8 @@ const styles = StyleSheet.create({
     height: 200,
     width: '100%',
   },
+  backContainer: { margin: 20 },
+  backImage: { width: 30, height: 30 },
 });
 
 export default styles;
