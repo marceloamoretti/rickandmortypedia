@@ -2,6 +2,7 @@ import React, { memo, ReactNode, useCallback } from 'react';
 import { Image } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import LinearGradient from 'react-native-linear-gradient';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import Banner from '~assets/icons/Banner.png';
 import ChevronLeft from '~assets/icons/chevron-left.png';
@@ -20,11 +21,16 @@ interface IProps {
 }
 
 const DefaultContainer = memo<IProps>(({ children, goBack }) => {
+  const safeAreaInsets = useSafeAreaInsets();
   const navigation = useNavigation();
   const navigateBack = useCallback(() => navigation.goBack(), [navigation]);
 
   const backComponent = (
-    <TouchableOpacity onPress={navigateBack} style={styles.backContainer}>
+    <TouchableOpacity
+      onPress={navigateBack}
+      // eslint-disable-next-line react-perf/jsx-no-new-array-as-prop, react-memo/require-usememo
+      style={[styles.backContainer, { paddingTop: safeAreaInsets.top }]}
+    >
       <Image source={ChevronLeft} style={styles.backImage} />
     </TouchableOpacity>
   );

@@ -5,11 +5,11 @@ import { UseInfiniteQueryResult } from '@tanstack/react-query';
 
 import ArrowUp from '~assets/icons/arrow-up.png';
 import { Character, CharacterList } from '~components/characters/types';
+import DefaultContainer from '~components/ui/components/DefaultContainer/DefaultContainer';
 import EmptyList from '~components/ui/components/EmptyList/EmptyList';
 import Search from '~components/ui/components/Search/Search';
 import { assignKeyExtractor } from '~utils/keyExtractor';
 
-import DefaultContainer from '../DefaultContainer/DefaultContainer';
 import ListItem from '../ListItem/ListItem';
 import Loader from '../Loader/Loader';
 

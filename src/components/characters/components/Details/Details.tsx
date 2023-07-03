@@ -3,9 +3,9 @@ import { useTranslation } from 'react-i18next';
 import { Image, ScrollView } from 'react-native';
 
 import { Character } from '~components/characters/types';
+import DefaultContainer from '~components/ui/components/DefaultContainer/DefaultContainer';
 import { TextXLarge } from '~components/ui/components/Text';
 
-import DefaultContainer from '../DefaultContainer/DefaultContainer';
 import InformationSection from '../InformationSection/InformationSection';
 
 import styles from './styles';
