@@ -1,7 +1,6 @@
 /* eslint-disable react-memo/require-usememo */
 import React, { memo, useCallback, useMemo } from 'react';
 import { ActivityIndicator, FlatList, ListRenderItem } from 'react-native';
-import LinearGradient from 'react-native-linear-gradient';
 import { UseInfiniteQueryResult } from '@tanstack/react-query';
 
 import { Character, CharacterList } from '~components/characters/types';
@@ -9,11 +8,10 @@ import Search from '~components/ui/components/Search/Search';
 import { theme } from '~components/ui/theme';
 import { assignKeyExtractor } from '~utils/keyExtractor';
 
+import DefaultContainer from '../DefaultContainer/DefaultContainer';
 import ListItem from '../ListItem/ListItem';
 
 import styles from './styles';
-
-const gradientLocations = [0.2031, 0.2031, 0.4792, 1];
 
 type Props = {
   list: UseInfiniteQueryResult<CharacterList, Error>;
@@ -35,13 +33,7 @@ const CharactersList = memo<Props>(({ list, searchInput, setSearchInput }) => {
   );
 
   return (
-    <LinearGradient
-      style={styles.container}
-      colors={theme.colors.gradientPurple}
-      locations={gradientLocations}
-      start={useMemo(() => ({ x: 0, y: 0 }), [])}
-      end={useMemo(() => ({ x: 1, y: 1 }), [])}
-    >
+    <DefaultContainer>
       <FlatList
         ListFooterComponent={
           isFetchingNextPage ? (
@@ -74,7 +66,7 @@ const CharactersList = memo<Props>(({ list, searchInput, setSearchInput }) => {
           void fetchNextPage();
         }, [hasNextPage, fetchNextPage, isFetchingNextPage])}
       />
-    </LinearGradient>
+    </DefaultContainer>
   );
 });
 

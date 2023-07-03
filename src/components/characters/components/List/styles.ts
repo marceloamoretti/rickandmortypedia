@@ -10,7 +10,14 @@ const styles = StyleSheet.create({
     paddingVertical: 20,
   },
   contentContainer: {
-    paddingVertical: 20,
+    paddingBottom: 20,
+    paddingTop: 40,
+  },
+  imageBackground: {
+    position: 'absolute',
+    top: 0,
+    height: 200,
+    width: '100%',
   },
 });
 

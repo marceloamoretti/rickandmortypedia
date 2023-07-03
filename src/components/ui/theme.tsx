@@ -36,7 +36,7 @@ const Colors = {
   /* Gradients */
   gradientPurple: ['rgba(17, 16, 20, 0.98)', '#2D1671', '#3B228F', '#5539C8'],
   gradientGreen: ['#1AB65C', '#39E180'],
-  gradientBlue: ['#246BFD', '#6F9EFF'],
+  gradientBlue: ['rgba(17, 16, 20, 0.98)', '#1870A1', '#1870A1', '#357AA0'],
   gradientYellow: ['#FACC15', '#FFE580'],
   gradientRed: ['#FF5A5F', '#FF9094'],
 

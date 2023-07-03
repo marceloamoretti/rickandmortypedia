@@ -5,7 +5,7 @@ import en from './en.json';
 
 const resources = {
   en: {
-    translanation: en,
+    translation: en,
   },
 };
 
