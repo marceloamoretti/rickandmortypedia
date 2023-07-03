@@ -1,15 +1,16 @@
 /* eslint-disable react-memo/require-usememo */
 import React, { memo, useCallback, useMemo } from 'react';
-import { ActivityIndicator, FlatList, ListRenderItem } from 'react-native';
+import { FlatList, ListRenderItem } from 'react-native';
 import { UseInfiniteQueryResult } from '@tanstack/react-query';
 
 import { Character, CharacterList } from '~components/characters/types';
+import EmptyList from '~components/ui/components/EmptyList/EmptyList';
 import Search from '~components/ui/components/Search/Search';
-import { theme } from '~components/ui/theme';
 import { assignKeyExtractor } from '~utils/keyExtractor';
 
 import DefaultContainer from '../DefaultContainer/DefaultContainer';
 import ListItem from '../ListItem/ListItem';
+import Loader from '../Loader/Loader';
 
 import styles from './styles';
 
@@ -35,14 +36,9 @@ const CharactersList = memo<Props>(({ list, searchInput, setSearchInput }) => {
   return (
     <DefaultContainer>
       <FlatList
-        ListFooterComponent={
-          isFetchingNextPage ? (
-            <ActivityIndicator
-              style={styles.bottomActivityIndicator}
-              size="large"
-              color={theme.colors.white}
-            />
-          ) : undefined
+        ListFooterComponent={isFetchingNextPage ? <Loader /> : undefined}
+        ListEmptyComponent={
+          isFetching ? <Loader /> : <EmptyList isFetching={isFetching} onRetry={refetch} />
         }
         ListHeaderComponent={
           <Search
