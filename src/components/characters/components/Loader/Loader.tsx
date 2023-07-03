@@ -1,6 +1,6 @@
 import React, { memo, useEffect, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Animated, Easing, Text, View } from 'react-native';
+import { Animated, Easing, View } from 'react-native';
 
 import icon from '~assets/icons/loader.png';
 import { TextLarge } from '~components/ui/components/Text';
