@@ -1,4 +1,4 @@
-package com.rickandmortypedia;
+package com.amoretticorp.rickandmortypedia;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
