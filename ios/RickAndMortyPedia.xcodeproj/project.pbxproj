@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* RickAndMortyPediaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* RickAndMortyPediaTests.m */; };
+		028B196E2A53A5BF007FC91C /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 028B196D2A53A5BF007FC91C /* BootSplash.storyboard */; };
 		0C4D3319D8BB4BF28B508BD5 /* Urbanist-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 10C75CC9509940FFBC14F480 /* Urbanist-Bold.ttf */; };
 		0C80B921A6F3F58F76C31292 /* libPods-RickAndMortyPedia.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-RickAndMortyPedia.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
@@ -34,6 +35,7 @@
 		00E356EE1AD99517003FC87E /* RickAndMortyPediaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RickAndMortyPediaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* RickAndMortyPediaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RickAndMortyPediaTests.m; sourceTree = "<group>"; };
+		028B196D2A53A5BF007FC91C /* BootSplash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BootSplash.storyboard; path = RickAndMortyPedia/BootSplash.storyboard; sourceTree = "<group>"; };
 		0C55C73266424D3DBAB4DDDB /* Urbanist-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Urbanist-Regular.ttf"; path = "../assets/fonts/Urbanist-Regular.ttf"; sourceTree = "<group>"; };
 		10C75CC9509940FFBC14F480 /* Urbanist-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Urbanist-Bold.ttf"; path = "../assets/fonts/Urbanist-Bold.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* RickAndMortyPedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndMortyPedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,6 +96,7 @@
 		13B07FAE1A68108700A75B9A /* RickAndMortyPedia */ = {
 			isa = PBXGroup;
 			children = (
+				028B196D2A53A5BF007FC91C /* BootSplash.storyboard */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -268,6 +271,7 @@
 				B4CCCDFCA3A845AEB32454DB /* Urbanist-Medium.ttf in Resources */,
 				5D6CF84ED3D4490F9051E9E8 /* Urbanist-Regular.ttf in Resources */,
 				B7B494D87D3C445EBE8EF227 /* Urbanist-SemiBold.ttf in Resources */,
+				028B196E2A53A5BF007FC91C /* BootSplash.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,6 +517,8 @@
 				DEVELOPMENT_TEAM = JWD7LX5BU7;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = RickAndMortyPedia/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "The ";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -540,6 +546,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JWD7LX5BU7;
 				INFOPLIST_FILE = RickAndMortyPedia/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "The ";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

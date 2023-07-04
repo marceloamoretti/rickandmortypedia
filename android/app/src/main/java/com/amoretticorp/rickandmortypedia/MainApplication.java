@@ -1,4 +1,4 @@
-package com.rickandmortypedia;
+package com.amoretticorp.rickandmortypedia;
 
 import android.app.Application;
 import com.facebook.react.PackageList;
